@@ -1,32 +1,15 @@
-<%= link_to("<< Back to List", sections_path, :class => 'back-link')
-%>
+<%= link_to("<< Back to List", sections_path, :class => 'back-link') %>
 
 <div class="sections new">
-    <h2>Create Section</h2>
-    
-    <%= form_for(@section, :url => sections_path, :method => 'post') do 
-    |f| %>
+  <h2>Create Section</h2>
 
-    <table summary="Section from fields">
-        <tr>
-            <th>Name</th>
-            <td><%= f.text_field(:name) %></td>
-        </tr>
+  <%= form_for(@section) do |f| %>
 
-        <tr>
-            <th>Position</th>
-            <td><%= f.text_field(:position) %></td>
-        </tr>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
 
-        <tr>
-            <th>Visible</th>
-            <td><%= f.text_field(:visible) %></td>
-        </tr>
-    </table>
-        <div class="form-buttons">
-            <%= f.submit("Create Section")%>
-        </div>
-
-        <% end %>
-
+    <div class="form-buttons">
+      <%= f.submit("Create Section") %>
     </div>
+
+  <% end %>
+</div>
