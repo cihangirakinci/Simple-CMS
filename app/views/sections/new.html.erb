@@ -1,13 +1,13 @@
-<%= link_to("<< Back to List", subjects_path, :class => 'back-link')
+<%= link_to("<< Back to List", sections_path, :class => 'back-link')
 %>
 
-<div class="subjects new">
-    <h2>Create Subject</h2>
+<div class="sections new">
+    <h2>Create Section</h2>
     
-    <%= form_for(@subject, :url => subjects_path, :method => 'post') do 
+    <%= form_for(@section, :url => sections_path, :method => 'post') do 
     |f| %>
 
-    <table summary="Subject from fields">
+    <table summary="Section from fields">
         <tr>
             <th>Name</th>
             <td><%= f.text_field(:name) %></td>
@@ -24,7 +24,7 @@
         </tr>
     </table>
         <div class="form-buttons">
-            <%= f.submit("Create Subject")%>
+            <%= f.submit("Create Section")%>
         </div>
 
         <% end %>
