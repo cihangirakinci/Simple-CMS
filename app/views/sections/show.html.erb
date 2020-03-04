@@ -1,30 +1,43 @@
+<% @page_title = "Show Section" %>
+
 <%= link_to("<< Back to List", sections_path, :class => 'back-link') %>
 
 <div class="sections show">
   <h2>Show Section</h2>
 
-  <%= render(:partial => 'form', :locals => {:f => f}) %>
-
+  <table summary="Section detail view">
     <tr>
-        <th>Position</th>
-        <td><%= @section.position %></td>
+      <th>Name</th>
+      <td><%= @section.name %></td>
     </tr>
-
     <tr>
-        <th>Visible?</th>
-        <td><%= @section.visible ? 'true' : 'false' %></td>
+      <th>Page ID</th>
+      <td><%= @section.page_id %></td>
     </tr>
-
     <tr>
-        <th>Created</th>
-        <td><%= @section.created_at %></td>
+      <th>Position</th>
+      <td><%= @section.position %></td>
     </tr>
-
     <tr>
-        <th>Updated</th>
-        <td><%= @section.updated_at %></td>
+      <th>Visible?</th>
+      <td><%= @section.visible ? 'true' : 'false' %></td>
     </tr>
-    </table>
+    <tr>
+      <th>Content type</th>
+      <td><%= @section.content_type %></td>
+    </tr>
+    <tr>
+      <th>Content</th>
+      <td><%= @section.content %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @section.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @section.updated_at %></td>
+    </tr>
+  </table>
+
 </div>
-
-
