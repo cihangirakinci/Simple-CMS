@@ -5,6 +5,7 @@ class SubjectsController < ApplicationController
   before_action :set_subject_count, :only => [:new, :create, :edit, :update]
 
   def index
+    logger.debug("*** Testing the logger. ***")
     @subjects = Subject.all
   end
 
