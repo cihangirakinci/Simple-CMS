@@ -1,4 +1,3 @@
-
 <%= error_messages_for(f.object) %>
 
 <table summary="Section form fields">
@@ -8,21 +7,22 @@
   </tr>
   <tr>
     <th>Page</th>
-    <td><%= f.select(:page_id, @pages.map{|p| [p.name, p.id]}) %></td>
+    <td><%= f.object.page.name %></td>
   </tr>
   <tr>
+    <th>Position</th>
     <td><%= f.select(:position, 1..@section_count) %></td>
   </tr>
   <tr>
     <th>Visible</th>
-    <td><%= f.text_field(:visible) %></td>
+    <td><%= f.check_box(:visible) %></td>
   </tr>
   <tr>
     <th>Content type</th>
     <td>
       <%= f.radio_button(:content_type, 'text') %> Text
       <%= f.radio_button(:content_type, 'HTML') %> HTML
-      </td>
+    </td>
   </tr>
   <tr>
     <th>Content</th>
