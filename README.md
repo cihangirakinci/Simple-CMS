@@ -1,24 +1,8 @@
-# README
+# Simple CMS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live site: https://simple-cms-ny.herokuapp.com/
 
-Things you may want to cover:
+Features:
 
-* Ruby version
+* Ability to add, edit, delete a user
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
