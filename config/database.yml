@@ -15,4 +15,4 @@ production:
   <<: *default
   database: cms_production
   username: cihangirakinci
-  password: <%= password %>
+  password: <%= ENV['CMS_DATABASE_PASSWORD'] %>
