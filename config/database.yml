@@ -13,6 +13,6 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL'] %>
-  # username: cihangirakinci
-  # password: <%= ENV['CMS_DATABASE_PASSWORD'] %>
+  database: cms_production
+  username: cihangirakinci
+  password: <%= ENV['CMS_DATABASE_PASSWORD'] %>
