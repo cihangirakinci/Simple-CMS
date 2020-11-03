@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'public#index'
+  root :to => 'access#login'
 
   get 'show/:permalink', :to => 'public#show', :as => 'public_show'
 
